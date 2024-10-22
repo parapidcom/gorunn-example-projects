@@ -1,0 +1,10 @@
+git_repo: https://github.com/parapidcom/gorunn-example-django.git
+type: python
+version: "3.10"
+endpoint: mydjango.local.gorunn.io
+env_vars: true
+start_command: gunicorn mydjango.wsgi:application --bind 0.0.0.0:3000 --workers 3 --reload
+listen_port: 3000
+build_commands:
+  - pip install -r requirements.txt
+  - python manage.py migrate

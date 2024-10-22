@@ -1,0 +1,11 @@
+git_repo: https://github.com/parapidcom/gorunn-example-laravel.git
+type: php
+version: "8.3"
+endpoint: mylaravel.local.gorunn.io
+env_vars: true
+start_command: php artisan octane:start --server=swoole --port 80 --host 0.0.0.0 --watch
+listen_port: 80
+build_commands:
+  - composer install
+  - npm i
+  - php artisan migrate --force

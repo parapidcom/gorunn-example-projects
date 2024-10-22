@@ -1,0 +1,9 @@
+git_repo: https://github.com/parapidcom/gorunn-example-react.git
+type: node
+version: "20"
+endpoint: myreact.local.gorunn.io
+env_vars: true
+start_command: npm run dev
+listen_port: 3000
+build_commands:
+  - npm i
